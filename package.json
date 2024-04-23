@@ -1,5 +1,5 @@
 {
-  "name": "typographix-final",
+  "name": "creative_design",
   "version": "1.0.0",
   "description": "Final version of typographix website.",
   "main": "index.html",
@@ -11,6 +11,6 @@
   "author": "Jacinto Design",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.69.5"
+    "sass": "^1.74.1"
   }
 }

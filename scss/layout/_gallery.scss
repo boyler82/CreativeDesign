@@ -2,9 +2,10 @@
 #gallery {
     @extend %section;
 
+
     .gallery-container {
         @include flex-center;
-        height: 100vh;
+        height: 90vh;
         position: relative;
         top: 50px;
 
@@ -25,15 +26,56 @@
             @include mobile-gallery-container(30vh);
         }
     }
+    .group{
+        @include tablet-horizontal-large {
+            width: 60vw;
+            margin: 0 2.5%;
+            margin-bottom: 20px;
+        }
+
+
+        transition: 300ms ease-in-out;
+        padding: 10px;
+        background-color: var(--background-lighten);
+        margin-right: 10px;
+        border-radius: 10px;
+// llllllllllllllllll
+        margin-bottom: 10px;
+        margin-right: 20px;
+        cursor: pointer;
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: var(--box-shadow); //4px 4px 8px rgba(0, 0, 0, 0.5); /* Horizontal and vertical shadow with blur and spread */
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+
+
+        &:hover {
+            box-shadow: var(--box-shadow);//0 12px 16px rgba(0,0,0,0.2); /* Lighter shadow on hover */
+            background-color: var(--background-darken);
+            scale: 1.06;
+            }
+
+
+        .form-button {
+            cursor: pointer;
+            text-decoration: none;
+            transition: color 0.3s; 
+
+                &:hover {
+                color: $nav-font-color1;
+                }
+        }
+
+    }
 
     .image-box {
+      
         width: 300px;
         opacity: 0.5;
         transform: scale(0.95);
-        margin-right: 10px;
+
 
         &:not(.tall) {
-            height: 400px;
+            height: 200px;
         }
 
         &.tall {
@@ -75,17 +117,35 @@
     }
 
     .text-box {
-        background: $background-alt;
+        background: var(--background);
         box-sizing: border-box;
-        padding: 20px;
+        padding: 10px;
+        min-height: 140px;
         width: 300px;
 
+        hr {
+            color: var(--primary-font-color);
+        }
+
         h3 {
-            color: $secondary-font-color;
+            text-align: center;
+            color: var(--primary-font-color);
+        }
+        p {
+            text-align: left;
+            font-size: clamp(0.3rem, 5vw, 0.7rem);;
+            color: var(--primary-font-color-lighten);
         }
     }
+    .form-button {
+        color: var(--primary-font-color);
+        background-color: var(--primary-color);
+        text-align: center;
+    }
+   
+   
 
-    .image-box, .text-box {
+    .image-box, .text-box, .form-button {
         border-radius: 10px;
         &:not(:last-child) {
             margin-bottom: 10px;

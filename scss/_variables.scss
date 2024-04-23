@@ -1,9 +1,37 @@
+
+
+:root {
+    --background: whitesmoke;
+    --background-home: rgba(0, 0, 0, 0);
+    --background-lighten: rgb(121, 121, 121);    
+    --background-darken: rgb(163, 163, 163);
+    --primary-color: hsl(225, 100%, 75%);
+    --primary-font-color: rgb(5, 5, 5);
+    --primary-font-color-lighten: rgb(102, 102, 102);
+    --primary-font-color-darken: rgb(166, 253, 52);
+    --box-shadow: 6px 6px 11px rgba(0, 0, 0, 0.2); //0px 0px 15px rgb(15, 247, 7);
+    --box-shadow-hover: 12 12px 11px rgba(0,0,0,0.7);
+    --box-shadow-container: var(--background);
+}
+  
+[data-theme='dark'] {
+    --background: rgb(58, 58, 58);
+    --background-home: rgba(0, 0, 0, 0.5);
+    --background-lighten: rgb(192, 192, 192);    
+    --background-darken: rgb(90, 90, 90);
+    --primary-color: hsl(225, 100%, 65%);
+    --primary-font-color: rgb(202, 202, 202);
+    --primary-font-color-lighten: rgb(163, 163, 163);
+    --primary-font-color-darken: rgb(52, 230, 253);
+    --box-shadow: 0 12px 16px rgba(0,0,0,0.2);//0px 0px 10px rgba(255, 255, 255, 0.916);
+    --box-shadow-container: rgb(31, 31, 31);
+}
 // Variables
 $font-stack: 'Inter', sans-serif;
-$background: rgb(18, 18, 18);
-$background-alt: rgb(31, 31, 31);
-$input-bg: lighten($background-alt, 20%);
-$primary-color: hsl(225, 100%, 75%);
-$primary-font-color: rgb(150, 150, 150);
-$secondary-font-color: rgb(200, 200, 200);
-$nav-font-color: rgb(230, 230, 230);
+$background1: rgb(254, 169, 169);
+$background-alt1: rgb(100, 76, 76);
+$input-bg1: var(--background);
+$primary-color1: hsl(225, 100%, 75%);
+$primary-font-color1: rgb(0, 139, 53);
+$secondary-font-color1: rgb(170, 104, 104);
+$nav-font-color1: rgb(168, 66, 66);

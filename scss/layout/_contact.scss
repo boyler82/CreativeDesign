@@ -6,7 +6,6 @@
 
     .contact-container {
         opacity: 0;
-
         @include smartphone-vertical {
             padding-top: 5vh;
         }
@@ -21,18 +20,29 @@
 
         h2 {
             font-size: clamp(2rem, 5vw, 3rem);
+
         }
     
         .form-container {
-            background-color: $background-alt;
+
+            background-color: var(--background-lighten);
             padding: 20px;
             width: 80vw;
             margin: 0 auto;
             border-radius: 20px;
             font-size: 1rem;
+            box-shadow: var(--box-shadow); //4px 4px 8px rgba(0, 0, 0, 0.5); /* Horizontal and vertical shadow with blur and spread */
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
+      
+      
+            &:hover {
+                box-shadow: var(--box-shadow);//0 12px 16px rgba(0,0,0,0.2); /* Lighter shadow on hover */
+                scale: 1.01;
+                }
     
             form {
                 .grid-container {
+
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 20px;
@@ -43,20 +53,32 @@
                     }
     
                     .form-group {
+
                         display: flex;
                         flex-direction: column;
     
                         label {
+
                             color: white;
                             margin-bottom: 5px;
                         }
     
                         input {
+
+                            background-color: var(--background-darken);
                             @extend %contact-input;
                             &:focus {
                                 outline: none;
-                                background-color: darken($input-bg, 10%);
+                                // background-color: ;
                             }
+                            box-shadow: var(--box-shadow); //4px 4px 8px rgba(0, 0, 0, 0.5); /* Horizontal and vertical shadow with blur and spread */
+                            transition: all 0.3s ease; /* Smooth transition for hover effect */
+                      
+                      
+                            &:hover {
+                                box-shadow: var(--box-shadow);//0 12px 16px rgba(0,0,0,0.2); /* Lighter shadow on hover */
+                                scale: 1.01;
+                                }
                         }
                     }
                 }
@@ -75,6 +97,7 @@
                         margin: 20px 20px 0 0;
                         height: 200px;
                         resize: vertical;
+                        background-color: var(--background-darken);
         
                         @include smartphone-horizontal {
                             height: 100px;
@@ -86,7 +109,7 @@
         
                         &:focus {
                             outline: none;
-                            background-color: darken($input-bg, 10%);
+                            // background-color: $input-bg1;
                         }
                     }
                 }
@@ -94,18 +117,20 @@
                 button {
                     width: 100%;
                     padding: 15px;
-                    background-color: lighten($input-bg, 30%);
+                    background-color: $input-bg1;
                     border-radius: 25px;
-                    color: $background;
+                    color: var(--primary-font-color);
                     font-size: 1.2rem;
                     border: none;
                     cursor: pointer;
                     transition: background-color 0.3s;
                     margin-top: 20px;
+                    font-weight: 700;
     
                     &:hover {
-                        background-color: darken($input-bg, 10%);
-                        color: $secondary-font-color;
+                        background-color: var(--background-darken);
+                        color: var(--primary-font-color-darken);
+                  
                     }
                 }
             }

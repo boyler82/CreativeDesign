@@ -28,7 +28,7 @@
 
         p {
             width: 75ch;
-            font-size: clamp(1rem, 5vw, 1.5rem);
+            font-size: clamp(0.5rem, 5vw, 1rem);
             line-height: 1.8;
 
             @include tablet-horizontal {
@@ -43,7 +43,7 @@
         }
 
         .phrase {
-            color: darken($primary-font-color, 20%);
+            color: var(--primary-font-color-lighten);
             transition-property: color;
             transition-timing-function: ease;
           
@@ -54,7 +54,7 @@
             }
           
             &.active {
-                color: lighten($primary-font-color, 20%);
+                color: var(--primary-font-color-lighten);
             }
         }
     }
