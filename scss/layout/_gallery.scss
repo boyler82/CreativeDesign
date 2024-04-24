@@ -1,13 +1,53 @@
 /* Gallery Section -------------------- */
 #gallery {
     @extend %section;
+    .opis-zamuwienia {
+        color: var(--primary-font-color);
+        padding: 0 60px;
+        h2 {
+            
+            text-align: center;
+            font-size: clamp(0.5rem, 10vw, 1rem);
 
+            @include tablet-horizontal {
+                margin-left: 5%;
+            }
+
+            @include tablet-vertical {
+                margin-left: 5%;
+            }
+        }
+
+        p {
+            a{
+                color: var(--primary-color);
+                cursor: pointer;
+                // text-decoration: none;
+            }
+            // font-style: italic;
+            font-size: clamp(0.1rem, 5vw, 0.8rem);
+            line-height: 1.8;
+            text-align: center;
+
+            @include tablet-horizontal {
+                width: 90%;
+                margin-left: 5%;
+            }
+
+            @include tablet-vertical {
+                width: 90%;
+                margin-left: 5%;
+            }
+        }
+
+    }
 
     .gallery-container {
+
         @include flex-center;
-        height: 90vh;
+        height: 61vh;
         position: relative;
-        top: 50px;
+        top: 3px;
 
         @include tablet-horizontal-large {
             margin: 0 2.5%;
@@ -24,6 +64,39 @@
         @include smartphone-horizontal {
             margin: 0 2.5%;
             @include mobile-gallery-container(30vh);
+        }
+        .opis-zamuwienia {
+       
+            h2 {
+                color: aqua;
+                font-size: clamp(0.5rem, 10vw, 1rem);
+    
+                @include tablet-horizontal {
+                    margin-left: 5%;
+                }
+    
+                @include tablet-vertical {
+                    margin-left: 5%;
+                }
+            }
+    
+            p {
+
+                width: 75ch;
+                font-size: clamp(0.5rem, 5vw, 1rem);
+                line-height: 1.8;
+    
+                @include tablet-horizontal {
+                    width: 90%;
+                    margin-left: 5%;
+                }
+    
+                @include tablet-vertical {
+                    width: 90%;
+                    margin-left: 5%;
+                }
+            }
+    
         }
     }
     .group{
