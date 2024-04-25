@@ -128,3 +128,13 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', set
 
 // Initialize theme when the script loads
 initializeTheme();
+
+// llllllllllllllllllllllllll
+
+fetch(sign_in, {
+  method: 'POST',
+  mode: 'no-cors', // Use with caution!
+  credentials: 'include',
+  headers: headers
+})
+
