@@ -14,48 +14,61 @@
         height: 100%;
         width: 100%;
 
-        h2 {
-            font-size: clamp(2rem, 5vw, 3rem);
-
-            @include tablet-horizontal {
-                margin-left: 5%;
-            }
-
-            @include tablet-vertical {
-                margin-left: 5%;
-            }
-        }
-
-        p {
-            width: 75ch;
-            font-size: clamp(0.5rem, 5vw, 1rem);
-            line-height: 1.8;
-
-            @include tablet-horizontal {
-                width: 90%;
-                margin-left: 5%;
-            }
-
-            @include tablet-vertical {
-                width: 90%;
-                margin-left: 5%;
-            }
-        }
-
-        .phrase {
+        .text-container{
+            background-color: var(--background-darken);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            opacity: 1;
             color: var(--primary-font-color-lighten);
-            transition-property: color;
-            transition-timing-function: ease;
-          
-            @for $i from 1 through 8 {
-                &:nth-child(#{$i}) {
-                    transition-delay: $i * 0.1s;
+            box-shadow: var(--box-shadow); //4px 4px 8px rgba(0, 0, 0, 0.5); /* Horizontal and vertical shadow with blur and spread */
+            h2 {
+                font-size: clamp(2rem, 5vw, 3rem);
+    
+                @include tablet-horizontal {
+                    width: 90%;
+                    margin-left: 5%;
+                }
+    
+                @include tablet-vertical {
+                    width: 90%;
+                    margin-left: 5%;
                 }
             }
-          
-            &.active {
-                color: var(--primary-font-color-lighten);
+    
+            p {
+                padding-top: 20px;
+                width: 75ch;
+                font-size: clamp(0.5rem, 5vw, 1rem);
+                line-height: 1.8;
+    
+                @include tablet-horizontal {
+                    width: 90%;
+                    margin-left: 5%;
+                }
+    
+                @include tablet-vertical {
+                    width: 90%;
+                    margin-left: 5%;
+                }
             }
+    
+            .phrase {
+                color: var(--primary-font-color-lighten);
+                transition-property: color;
+                transition-timing-function: ease;
+              
+                @for $i from 1 through 4 {
+                    &:nth-child(#{$i}) {
+                        transition-delay: $i * 0.5s;
+                    }
+                }
+              
+                &.active {
+                    color: var(--primary-font-color-lighten);
+                }
+            }
+
         }
     }
 }

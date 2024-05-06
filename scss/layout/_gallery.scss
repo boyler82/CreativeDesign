@@ -2,12 +2,22 @@
 #gallery {
     @extend %section;
     .opis-zamuwienia {
+
         color: var(--primary-font-color);
-        padding: 0 60px;
+        margin: 0 10%;
+    
+  
+        background-color: var(--background-darken);
+        padding: 20px 20px;
+        border-radius: 10px;
+        margin-bottom: 50px;
+        opacity: 1;
+        color: var(--primary-font-color-lighten);
+        box-shadow: var(--box-shadow); 
         h2 {
             
             text-align: center;
-            font-size: clamp(0.5rem, 10vw, 1rem);
+            font-size: clamp(1rem, 10vw, 1.5rem);
 
             @include tablet-horizontal {
                 margin-left: 5%;
@@ -25,7 +35,7 @@
                 // text-decoration: none;
             }
             // font-style: italic;
-            font-size: clamp(0.1rem, 5vw, 0.8rem);
+            font-size: clamp(0.5rem, 5vw, 1rem);
             line-height: 1.8;
             text-align: center;
 
@@ -212,7 +222,7 @@
     }
     .form-button {
         color: var(--primary-font-color);
-        background-color: var(--primary-color);
+        background-color: var(--primary-font-color-lighten);
         text-align: center;
     }
    
