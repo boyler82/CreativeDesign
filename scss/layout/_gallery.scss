@@ -10,7 +10,6 @@
         background-color: var(--background-darken);
         padding: 20px 20px;
         border-radius: 10px;
-        margin-bottom: 50px;
         opacity: 1;
         color: var(--primary-font-color-lighten);
         box-shadow: var(--box-shadow); 
@@ -55,10 +54,10 @@
     .gallery-container {
 
         @include flex-center;
-        height: 61vh;
+        height: 65vh;
         position: relative;
         top: 3px;
-
+    
         @include tablet-horizontal-large {
             margin: 0 2.5%;
         }
