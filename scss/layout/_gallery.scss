@@ -1,6 +1,7 @@
 /* Gallery Section -------------------- */
 #gallery {
     @extend %section;
+    padding-top: 100px;
     .opis-zamuwienia {
 
         color: var(--primary-font-color);

@@ -4,7 +4,7 @@
         width: 100vw;
       }
     position: relative;
-    z-index: -1;
+    z-index: -99;
     height: 100vh;
     display: grid;
     place-items: center;
@@ -27,6 +27,7 @@
     background-color: var(--background-home);
     display: grid;
     place-items: center;
+
 
     h1 {
         position: relative;
@@ -65,9 +66,9 @@
         font-weight: 200;
     }
     .home-icons {
-   
+       
         position: absolute;
-        margin-top: 87vh;
+        margin-top: 72vh;
         text-align: center;
 
         .social-icons {
@@ -92,10 +93,11 @@
 
     
 a {
-
+  
     text-decoration: none;
  
     .my-button {
+
         background-color: #5689924a; /* Green background */
         border: none;
         color: white;

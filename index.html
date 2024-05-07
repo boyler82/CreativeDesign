@@ -44,8 +44,11 @@
             </ul>
         </div>
     </nav>
-    
+
+
     <main>
+    <!-- ----------------------------------------- -->
+
 
         <!-- Home Section -->
         <section id="home">
@@ -56,6 +59,7 @@
                 </video>
             </div>
             <!-- Overlay -->
+     
             <div class="overlay">
                 <div class="group" >
                     <a href="#gallery">
@@ -65,6 +69,10 @@
                         </div>
                     </a>  
                 </div>
+
+
+
+
                 <div class="home-icons">
                     <div class="social-icons">
                         <a href="https://www.facebook.com/profile.php?id=61558582601631" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f" title="Facebook"></i></a>
@@ -79,6 +87,15 @@
 
         <!-- About Section -->
         <section id="about">
+            <div class="phone-container" onclick="togglePhoneNumber()">
+                 <div class="phone-number" id="phone-number" >
+                    <a href="tel:+48576401579" class="phone-button">
+                        <p>Zadzwoń: +48 576 401 579</p>
+                    </a>
+                </div>          
+                <div class="phone-icon" ><i class="fa-solid fa-phone"></i></div>
+
+            </div>
             <div class="about-container">
                 <div class="text-container">
                     <h3>O Nas</h3>
@@ -217,7 +234,13 @@
         <!-- Contact Section -->
         <section id="contact">
             <div class="contact-container">
-                <h2>Zostaw nam wiadomość!</h2>
+                <div class="contact-header">
+                    <h3>Zostaw nam wiadomość!</h3>
+                    <a href="tel:+48576401579" class="phone-button">
+                        <p><i class="fa-solid fa-phone"></i> +48 576 401 579</p>
+                    </a>
+                </div>
+
                 <div class="form-container">
                     <form action="https://formspree.io/f/myyrlldb" method="POST" id="myForm">
                         <div class="grid-container">
@@ -267,8 +290,8 @@
     </div>
 
     <!-- Script -->
+
     <script src="script.js"></script>
     <!-- <script src="https://kit.fontawesome.com/5adeb338ef.js" crossorigin="anonymous"></script> -->
-  
 </body>
 </html>
